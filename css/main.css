@@ -16,7 +16,7 @@ ul{
     height: 100vh;
 }
 #fullpage section:nth-child(1){
-    background-image: url("/img/bg_code.jpg");
+    background-image: url("../img/bg_code.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

@@ -2,12 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-UA-Comatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Becchus</title>
     <link rel="shortcut icon" href="img/logo.png">
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/JQuery.js"></script>
     <script type="text/javascript" src="js/jquery.fullpage.js"></script>
+    <!-- Slider ----------------------------------------->
+    <link rel="stylesheet" type="text/css" href="css/lightslider.css">
+    <script type="text/javascript" src="js/lightslider.js"></script>
+     <!-- Font Awesome ----------------------------------------->
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -43,11 +48,59 @@
             </div>
         </section>
         <section>
-
+            <div class="explore-h">
+                <h1>Descubre tu estilo</h1>
+                <p>Elige entre los diferentes estilos de Becchus</p>
+            </div>
+            <div class="box-container">
+                <ul id="autoWidth" class="cs-hidden">
+                    <li class="item-a">
+                        <div class="box-1">
+                            <p>Hombre</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-2">
+                            <p>Mujer</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-3">
+                            <p>Hogar</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-4">
+                            <p>Cuidado de piel</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-5">
+                            <p>Accesorios</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="box-6">
+                            <p>Bebes</p>
+                        </div>
+                    </li>
+                  </ul>
+            </div>
         </section>
     </div>
     <script type="text/javascript">
+    // Scroll script
     $('#fullpage').fullpage();
+    // Slider script
+    $(document).ready(function() {
+			$("#autoWidth").lightSlider({
+                autoWidth: true,
+                loop:true,
+                onSliderLoad: function(){
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+		});
     </script>
 </body>
 </html>
